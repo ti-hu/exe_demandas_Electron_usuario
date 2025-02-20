@@ -4,17 +4,40 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
+    "build": "electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "com.seuprojeto.exedemandas",
+    "productName": "Exedemandas",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.js",
+      "package.json",
+      "**/*"
+    ],
+    "icon": "assets/icon.ico",
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "axios": "^1.7.9",
-    "electron": "^34.2.0"
+    "axios": "^1.7.9"
   },
   "devDependencies": {
+    "electron": "^34.2.0",
     "electron-builder": "^25.1.8"
   }
 }

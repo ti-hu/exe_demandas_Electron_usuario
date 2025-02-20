@@ -1,7 +1,8 @@
 const { contextBridge, ipcRenderer } = require("electron");
 
 // Base URL da API Django
-const BASE_URL = "http://localhost:3001/executavel";
+const BASE_URL = 'http://172.16.3.66:3001/executavel';
+// const BASE_URL = "http://localhost:3001/executavel";
 const API_PERFIL = `${BASE_URL}/perfil_demanda_api/`;
 const API_CRIAR = `${BASE_URL}/criar_demanda_api/`;
 const API_LISTAR = `${BASE_URL}/listar_demanda_api/`;
